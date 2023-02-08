@@ -8,9 +8,11 @@
 .main_container {
   display: flex;
   padding: 2rem;
+  padding-top: 1rem;
   flex-direction: column;
   row-gap: 2rem;
   text-align: center;
+  align-items:center ;
   justify-content: center;
   font-family: "Satisfy";
 }
@@ -36,6 +38,11 @@
   color: #ff0000;
   text-decoration: none;
   text-decoration: underline;
+}
+.ozonecubo
+{
+  width: 350px;
+  height: auto;
 }
 @media (max-width: 768px) {
   .main_container {

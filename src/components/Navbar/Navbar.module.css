@@ -2,15 +2,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
   width: 100%;
-  padding: 0 2rem;
+  padding: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.ozoneheading {
+  width: 250px;
+  height: auto;
 }
 @media (max-width: 768px) {
   .navbar__container {
     justify-content: center;
-    padding-top: 3rem;
+    padding-top: 1rem;
   }
-  .navbar__container img {
+  .tlelogo {
     width: 150px;
     height: auto;
   }

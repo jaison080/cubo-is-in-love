@@ -1,9 +1,9 @@
 import { Footer, Loader, Navbar } from "@/components";
 import CustomTitle from "@/utils/customTitle";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
+import ozonecubo from "../assets/ozonecubo.jpeg";
+import Image from "next/image";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -12,10 +12,6 @@ export default function Home() {
     setTimeout(() => {
       setLoading(false);
     }, 1500);
-  }, []);
-
-  useEffect(() => {
-    Aos.init({ duration: 1500 });
   }, []);
 
   if (loading) {
@@ -33,6 +29,16 @@ export default function Home() {
       <div className={styles.homepage__container}>
         <Navbar />
         <div className={styles.main_container}>
+          <div data-aos="zoom-in">
+            <Image
+              src={ozonecubo}
+              alt="ozonecubo"
+              style={{
+                pointerEvents: "none",
+              }}
+              className={styles.ozonecubo}
+            />
+          </div>
           <div className={styles.text_1} data-aos="fade-up">
             Catch me if you can 15-40 km above you
           </div>
@@ -58,15 +64,21 @@ export default function Home() {
           >
             Here's a song for you…
           </div>
-          <div data-aos="fade-up" data-aos-delay="400">
-            <a
-              href="https://open.spotify.com/track/1tZQJiCrjMuWZkNdtClr2Z?si=EjP_LNbFSF-8q-BlystXKQ"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.music_link}
-            >
-              Call me by 90sFlav
-            </a>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="400"
+            className={styles.music_link}
+            style={{
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              window.open(
+                "https://open.spotify.com/track/1tZQJiCrjMuWZkNdtClr2Z?si=EjP_LNbFSF-8q-BlystXKQ",
+                "_blank"
+              );
+            }}
+          >
+            Call me by 90sFlav
           </div>
         </div>
         <Footer />

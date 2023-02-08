@@ -8,6 +8,7 @@ function Footer() {
     <div className={styles.footer_container}>
       <div
         className={styles.footer_button}
+        data-aos="zoom-in"
         onClick={() => {
           window.open("https://bit.ly/TLE_Ozone", "_blank");
         }}

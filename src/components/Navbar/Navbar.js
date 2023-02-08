@@ -21,8 +21,11 @@ function Navbar() {
       <Image
         src={ozoneheading}
         alt="ozoneheading"
+        onClick={() => {
+          window.open("https://bit.ly/TLE_Ozone", "_blank");
+        }}
         style={{
-          pointerEvents: "none",
+          cursor: "pointer",
         }}
         className={styles.ozoneheading}
       />

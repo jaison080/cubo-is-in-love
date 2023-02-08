@@ -12,15 +12,50 @@
   font-weight: 600;
   font-family: "Unbounded";
 }
+.social_icons {
+  display: flex;
+  column-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.footer_button
+{
+  background-color: #640000;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Unbounded";
+  cursor: pointer;
+  transition: 0.2s;
+}
+.footer_button:hover {
+  transform: scale(1.1);
+}
+.social_icon {
+  font-size: 2rem;
+  color: #640000;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.social_icon:hover {
+  transform: scale(1.2);
+}
 @media (max-width: 768px) {
-  .footer_text
-  {
+  .footer_text {
     font-size: 1.2rem;
   }
-}
-@media (max-width:400px) {
-  .footer_text
-  {
+  .footer_button {
     font-size: 1rem;
+  }
+}
+@media (max-width: 400px) {
+  .footer_text {
+    font-size: 1rem;
+  }
+  .footer_button {
+    font-size: 0.8rem;
   }
 }

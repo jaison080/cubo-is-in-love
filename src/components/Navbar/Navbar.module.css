@@ -13,13 +13,19 @@
   width: 250px;
   height: auto;
 }
+.tlelogo {
+  width: 100px;
+  height: auto;
+}
 @media (max-width: 768px) {
   .navbar__container {
-    justify-content: center;
     padding-top: 1rem;
   }
-  .tlelogo {
-    width: 150px;
-    height: auto;
+}
+@media (max-width: 450px) {
+  .navbar__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
